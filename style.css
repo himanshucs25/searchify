@@ -1,0 +1,16 @@
+.google_search{
+	margin-top: 250px;
+}
+
+#myText{
+	border-radius: 100px;
+	height: 20px;
+	width: 300px;
+
+}
+
+
+.search_button{
+	border-color: transparent;
+	border-radius: 100px;
+}
