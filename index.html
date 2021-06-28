@@ -3,42 +3,59 @@
 <head>
 	<title>Google</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="icon"  href="google_vector.png">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
 <body>
 
 
-<div class="google_search">
-<form class="" action="index.html" method="post">
+<div id="google_search">
+<form id="search_bar_code">
 	<center>
-		<img src="google_logo.png"> <br>
+		<img class="logo"src="google_logo.png"> <br>
 
-	<input id="myText" type="text" name="">
+	<input id="myText" type="text">
+	<button class="search_button" onclick="myFunction()"> SEARCH</button>
+
+</center>
 
 </form>
 
-<button class="search_button" onclick="myFunction()">Search</button>
-</center>
+
+<div id="color-change-buttons">
+
+
+<button id="color-button-pink" onclick="dark()"></button>
+<button id="color-button-green" onclick="light()"></button>
+
+
+
+</div>
 </div>
 
-
-
-
-
 <script>
+
 function myFunction() {
 	var text=document.getElementById("myText").value;
   // var search=prompt("What do you wanna search?");
 var answer = 'https://www.google.com/search?q='+text;
-
- 
-
 window.open(answer);
 }
 
+function dark() {
+	
+
+  document.body.style.background = "pink";
+
+
+	}
+function light() {
+	document.body.style.background = "#97db9c";
+
+	}
 
 
 </script>
-
 </body>
 </html>
 
