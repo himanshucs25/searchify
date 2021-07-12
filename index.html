@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Google</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="icon"  href="google_vector.png">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
 
+
+<body>
 
 <div id="google_search">
 <form id="search_bar_code">
 	<center>
-		<img class="logo"src="google_logo.png"> <br>
-
+	<img id="logo-1" src="logo.png">
+	<br>
+<form>
 	<input id="myText" type="text">
-	<button class="search_button" onclick="myFunction()"> SEARCH</button>
+	</form>
 
 </center>
 
-</form>
-
-
-<div id="color-change-buttons">
-
-
-<button id="color-button-pink" onclick="dark()"></button>
-<button id="color-button-green" onclick="light()"></button>
-
-
-
 </div>
+<center>
+
+    
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">CHOOSE</button>
+
+  <div id="myDropdown" class="dropdown-content">
+  	<center>
+   <a class="search_button" onclick="google_search_script()">Google </a>
+   <a class="search_button" onclick="duck_search_script()">Duck </a>
+</center>
 </div>
+</center>
 
 <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
 
-function myFunction() {
+
+function google_search_script() {
 	var text=document.getElementById("myText").value;
   // var search=prompt("What do you wanna search?");
 var answer = 'https://www.google.com/search?q='+text;
 window.open(answer);
 }
 
-function dark() {
-	
 
-  document.body.style.background = "pink";
+function duck_search_script() {
+	var text=document.getElementById("myText").value;
+  // var search=prompt("What do you wanna search?");
+var answer = 'https://duckduckgo.com/?q='+text;
+window.open(answer);
+}
 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-	}
-function light() {
-	document.body.style.background = "#97db9c";
-
-	}
-
-
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
